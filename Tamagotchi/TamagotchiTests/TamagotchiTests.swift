@@ -19,4 +19,17 @@ class TamagotchiTests: XCTestCase {
     
     }
     
+    
+    func testTamagotchiEatIncreasesWeight() {
+        //arrange
+        let tamagotchi = Tamagotchi()
+        let inputData = 5
+        let expected = 6
+        //act
+        let actual = tamagotchi.eatsnack(inputData: inputData)
+        
+        //assert
+        XCTAssertEqual(actual,expected)
+    }
+    
 }

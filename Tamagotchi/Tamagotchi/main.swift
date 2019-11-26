@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
+//invoking the constructor 'Int(4.0)' returns an object of type: Int
+let myNumber = Int(4.0)
+
 
