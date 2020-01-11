@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF8050C823C784240050E111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050C723C784240050E111 /* AppDelegate.swift */; };
+		DF8050CA23C784240050E111 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050C923C784240050E111 /* SceneDelegate.swift */; };
+		DF8050CC23C784240050E111 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050CB23C784240050E111 /* ContentView.swift */; };
+		DF8050CE23C784250050E111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8050CD23C784250050E111 /* Assets.xcassets */; };
+		DF8050D123C784250050E111 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF8050D023C784250050E111 /* Preview Assets.xcassets */; };
+		DF8050D423C784250050E111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF8050D223C784250050E111 /* LaunchScreen.storyboard */; };
+		DF8050DF23C784250050E111 /* CarCustomizer_WT_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050DE23C784250050E111 /* CarCustomizer_WT_Tests.swift */; };
+		DF8050EA23C784250050E111 /* CarCustomizer_WT_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050E923C784250050E111 /* CarCustomizer_WT_UITests.swift */; };
+		DF8050F823C7867A0050E111 /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8050F723C7867A0050E111 /* Car.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF8050DB23C784250050E111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF8050BC23C784240050E111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF8050C323C784240050E111;
+			remoteInfo = "CarCustomizer(WT)";
+		};
+		DF8050E623C784250050E111 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF8050BC23C784240050E111 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF8050C323C784240050E111;
+			remoteInfo = "CarCustomizer(WT)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF8050C423C784240050E111 /* CarCustomizer(WT).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CarCustomizer(WT).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8050C723C784240050E111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF8050C923C784240050E111 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DF8050CB23C784240050E111 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DF8050CD23C784250050E111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF8050D023C784250050E111 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF8050D323C784250050E111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF8050D523C784250050E111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8050DA23C784250050E111 /* CarCustomizer(WT)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CarCustomizer(WT)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8050DE23C784250050E111 /* CarCustomizer_WT_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCustomizer_WT_Tests.swift; sourceTree = "<group>"; };
+		DF8050E023C784250050E111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8050E523C784250050E111 /* CarCustomizer(WT)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CarCustomizer(WT)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8050E923C784250050E111 /* CarCustomizer_WT_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCustomizer_WT_UITests.swift; sourceTree = "<group>"; };
+		DF8050EB23C784250050E111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF8050F723C7867A0050E111 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF8050C123C784240050E111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050D723C784250050E111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050E223C784250050E111 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF8050BB23C784240050E111 = {
+			isa = PBXGroup;
+			children = (
+				DF8050C623C784240050E111 /* CarCustomizer(WT) */,
+				DF8050DD23C784250050E111 /* CarCustomizer(WT)Tests */,
+				DF8050E823C784250050E111 /* CarCustomizer(WT)UITests */,
+				DF8050C523C784240050E111 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF8050C523C784240050E111 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF8050C423C784240050E111 /* CarCustomizer(WT).app */,
+				DF8050DA23C784250050E111 /* CarCustomizer(WT)Tests.xctest */,
+				DF8050E523C784250050E111 /* CarCustomizer(WT)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF8050C623C784240050E111 /* CarCustomizer(WT) */ = {
+			isa = PBXGroup;
+			children = (
+				DF8050C723C784240050E111 /* AppDelegate.swift */,
+				DF8050C923C784240050E111 /* SceneDelegate.swift */,
+				DF8050CB23C784240050E111 /* ContentView.swift */,
+				DF8050CD23C784250050E111 /* Assets.xcassets */,
+				DF8050D223C784250050E111 /* LaunchScreen.storyboard */,
+				DF8050D523C784250050E111 /* Info.plist */,
+				DF8050CF23C784250050E111 /* Preview Content */,
+				DF8050F723C7867A0050E111 /* Car.swift */,
+			);
+			path = "CarCustomizer(WT)";
+			sourceTree = "<group>";
+		};
+		DF8050CF23C784250050E111 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DF8050D023C784250050E111 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF8050DD23C784250050E111 /* CarCustomizer(WT)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DF8050DE23C784250050E111 /* CarCustomizer_WT_Tests.swift */,
+				DF8050E023C784250050E111 /* Info.plist */,
+			);
+			path = "CarCustomizer(WT)Tests";
+			sourceTree = "<group>";
+		};
+		DF8050E823C784250050E111 /* CarCustomizer(WT)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF8050E923C784250050E111 /* CarCustomizer_WT_UITests.swift */,
+				DF8050EB23C784250050E111 /* Info.plist */,
+			);
+			path = "CarCustomizer(WT)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF8050C323C784240050E111 /* CarCustomizer(WT) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8050EE23C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)" */;
+			buildPhases = (
+				DF8050C023C784240050E111 /* Sources */,
+				DF8050C123C784240050E111 /* Frameworks */,
+				DF8050C223C784240050E111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CarCustomizer(WT)";
+			productName = "CarCustomizer(WT)";
+			productReference = DF8050C423C784240050E111 /* CarCustomizer(WT).app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF8050D923C784250050E111 /* CarCustomizer(WT)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8050F123C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)Tests" */;
+			buildPhases = (
+				DF8050D623C784250050E111 /* Sources */,
+				DF8050D723C784250050E111 /* Frameworks */,
+				DF8050D823C784250050E111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF8050DC23C784250050E111 /* PBXTargetDependency */,
+			);
+			name = "CarCustomizer(WT)Tests";
+			productName = "CarCustomizer(WT)Tests";
+			productReference = DF8050DA23C784250050E111 /* CarCustomizer(WT)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF8050E423C784250050E111 /* CarCustomizer(WT)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8050F423C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)UITests" */;
+			buildPhases = (
+				DF8050E123C784250050E111 /* Sources */,
+				DF8050E223C784250050E111 /* Frameworks */,
+				DF8050E323C784250050E111 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF8050E723C784250050E111 /* PBXTargetDependency */,
+			);
+			name = "CarCustomizer(WT)UITests";
+			productName = "CarCustomizer(WT)UITests";
+			productReference = DF8050E523C784250050E111 /* CarCustomizer(WT)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF8050BC23C784240050E111 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "Ahmed, Maheraj (HWTA)";
+				TargetAttributes = {
+					DF8050C323C784240050E111 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					DF8050D923C784250050E111 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = DF8050C323C784240050E111;
+					};
+					DF8050E423C784250050E111 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = DF8050C323C784240050E111;
+					};
+				};
+			};
+			buildConfigurationList = DF8050BF23C784240050E111 /* Build configuration list for PBXProject "CarCustomizer(WT)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF8050BB23C784240050E111;
+			productRefGroup = DF8050C523C784240050E111 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF8050C323C784240050E111 /* CarCustomizer(WT) */,
+				DF8050D923C784250050E111 /* CarCustomizer(WT)Tests */,
+				DF8050E423C784250050E111 /* CarCustomizer(WT)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF8050C223C784240050E111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8050D423C784250050E111 /* LaunchScreen.storyboard in Resources */,
+				DF8050D123C784250050E111 /* Preview Assets.xcassets in Resources */,
+				DF8050CE23C784250050E111 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050D823C784250050E111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050E323C784250050E111 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF8050C023C784240050E111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8050C823C784240050E111 /* AppDelegate.swift in Sources */,
+				DF8050CA23C784240050E111 /* SceneDelegate.swift in Sources */,
+				DF8050F823C7867A0050E111 /* Car.swift in Sources */,
+				DF8050CC23C784240050E111 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050D623C784250050E111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8050DF23C784250050E111 /* CarCustomizer_WT_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF8050E123C784250050E111 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8050EA23C784250050E111 /* CarCustomizer_WT_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF8050DC23C784250050E111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF8050C323C784240050E111 /* CarCustomizer(WT) */;
+			targetProxy = DF8050DB23C784250050E111 /* PBXContainerItemProxy */;
+		};
+		DF8050E723C784250050E111 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF8050C323C784240050E111 /* CarCustomizer(WT) */;
+			targetProxy = DF8050E623C784250050E111 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF8050D223C784250050E111 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF8050D323C784250050E111 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF8050EC23C784250050E111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF8050ED23C784250050E111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF8050EF23C784250050E111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CarCustomizer(WT)/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CarCustomizer(WT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF8050F023C784250050E111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CarCustomizer(WT)/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CarCustomizer(WT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DF8050F223C784250050E111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CarCustomizer(WT)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarCustomizer(WT).app/CarCustomizer(WT)";
+			};
+			name = Debug;
+		};
+		DF8050F323C784250050E111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CarCustomizer(WT)Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CarCustomizer(WT).app/CarCustomizer(WT)";
+			};
+			name = Release;
+		};
+		DF8050F523C784250050E111 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CarCustomizer(WT)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CarCustomizer(WT)";
+			};
+			name = Debug;
+		};
+		DF8050F623C784250050E111 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CarCustomizer(WT)UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.MaherajAhmed.CarCustomizer-WT-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CarCustomizer(WT)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF8050BF23C784240050E111 /* Build configuration list for PBXProject "CarCustomizer(WT)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8050EC23C784250050E111 /* Debug */,
+				DF8050ED23C784250050E111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8050EE23C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8050EF23C784250050E111 /* Debug */,
+				DF8050F023C784250050E111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8050F123C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8050F223C784250050E111 /* Debug */,
+				DF8050F323C784250050E111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8050F423C784250050E111 /* Build configuration list for PBXNativeTarget "CarCustomizer(WT)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF8050F523C784250050E111 /* Debug */,
+				DF8050F623C784250050E111 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF8050BC23C784240050E111 /* Project object */;
+}

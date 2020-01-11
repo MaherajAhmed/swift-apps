@@ -28,8 +28,8 @@ class Tamagotchi {
                 return weight
             }
         }
+        return weight
     }
-    
     func sleep() {
         while sleepLevel > 50 {
             if sleepLevel<=5 {
