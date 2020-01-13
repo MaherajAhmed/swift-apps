@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFC2CD3C23CB6295000B6A21 /* StarterCars.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC2CD3B23CB6295000B6A21 /* StarterCars.swift */; };
 		DFF3D20723C91BF500A98B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D20623C91BF500A98B7D /* AppDelegate.swift */; };
 		DFF3D20923C91BF500A98B7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D20823C91BF500A98B7D /* SceneDelegate.swift */; };
 		DFF3D20B23C91BF500A98B7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D20A23C91BF500A98B7D /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DFC2CD3B23CB6295000B6A21 /* StarterCars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterCars.swift; sourceTree = "<group>"; };
 		DFF3D20323C91BF500A98B7D /* CustomCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFF3D20623C91BF500A98B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFF3D20823C91BF500A98B7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				DFF3D21123C91BF600A98B7D /* LaunchScreen.storyboard */,
 				DFF3D21423C91BF600A98B7D /* Info.plist */,
 				DFF3D23623C91C6300A98B7D /* Car.swift */,
+				DFC2CD3B23CB6295000B6A21 /* StarterCars.swift */,
 			);
 			path = CustomCar;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				DFF3D20B23C91BF500A98B7D /* ViewController.swift in Sources */,
 				DFF3D20723C91BF500A98B7D /* AppDelegate.swift in Sources */,
 				DFF3D23723C91C6300A98B7D /* Car.swift in Sources */,
+				DFC2CD3C23CB6295000B6A21 /* StarterCars.swift in Sources */,
 				DFF3D20923C91BF500A98B7D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

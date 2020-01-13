@@ -24,6 +24,7 @@ class CustomCarTests: XCTestCase {
         """
         
         let actual = car.displayStats()
+
         XCTAssertEqual(actual, expected)
     }
 
