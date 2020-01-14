@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+class Tamagotchi {
+    
+    var name: String = "Tamagotchi"
+    var age: Int = 0
+    var mood: String = "Happy"
+    var timeTillToilet: Int = 60
+    var health: Int = 5
+    var death: String = ""
+    
+    func tamagotchiStats() -> String {
+        return """
+        Name: \(name)
+        Age: \(age)
+        Mood: \(mood)
+        How long can it hold: \(timeTillToilet)
+        Health: \(health)
+        """
+    }
+}
