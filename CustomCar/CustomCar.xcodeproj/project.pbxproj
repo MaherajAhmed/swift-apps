@@ -17,6 +17,8 @@
 		DFF3D21E23C91BF700A98B7D /* CustomCarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D21D23C91BF700A98B7D /* CustomCarTests.swift */; };
 		DFF3D22923C91BF700A98B7D /* CustomCarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D22823C91BF700A98B7D /* CustomCarUITests.swift */; };
 		DFF3D23723C91C6300A98B7D /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF3D23623C91C6300A98B7D /* Car.swift */; };
+		DFFE107723D0D8FF0013BE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF3D20C23C91BF500A98B7D /* Main.storyboard */; };
+		DFFE107823D0D9000013BE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFF3D20C23C91BF500A98B7D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -248,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFE107723D0D8FF0013BE92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFFE107823D0D9000013BE92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
