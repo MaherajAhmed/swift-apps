@@ -26,4 +26,12 @@ class Tamagotchi {
         Health: \(health)
         """
     }
+    
+    func takeToToilet() {
+        if timeTillToilet == 20 {
+            timeTillToilet += Int.random(in: 20...60)
+        } else {
+            timeTillToilet == timeTillToilet
+        }
+    }
 }
