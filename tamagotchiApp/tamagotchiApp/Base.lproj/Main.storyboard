@@ -31,11 +31,30 @@
                                     <action selector="timeTillToilet:" destination="BYZ-38-t0r" eventType="valueChanged" id="3Mv-T9-7hQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeS-RL-QhC">
+                                <rect key="frame" x="265" y="381" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="HANG OUT"/>
+                                <connections>
+                                    <action selector="hangOut:" destination="BYZ-38-t0r" eventType="valueChanged" id="rsL-Kp-HS7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlW-pf-SY5">
+                                <rect key="frame" x="304" y="433" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="FEED"/>
+                                <connections>
+                                    <action selector="feed:" destination="BYZ-38-t0r" eventType="valueChanged" id="zX3-dh-Dk8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="feed" destination="vlW-pf-SY5" id="0xK-wj-mZt"/>
+                        <outlet property="hangOut" destination="FeS-RL-QhC" id="cpy-NQ-y2q"/>
+                        <outlet property="takeToToilet" destination="SQF-58-Y1M" id="lfF-Ol-8aI"/>
                         <outlet property="tamagotchiStats" destination="9QJ-mJ-2Ss" id="oBF-bB-Trd"/>
                     </connections>
                 </viewController>

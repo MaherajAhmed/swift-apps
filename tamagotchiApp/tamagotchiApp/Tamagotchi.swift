@@ -28,10 +28,37 @@ class Tamagotchi {
     }
     
     func takeToToilet() {
-        if timeTillToilet == 20 {
+        if timeTillToilet < 60 {
             timeTillToilet += Int.random(in: 20...60)
-        } else {
-            timeTillToilet == timeTillToilet
         }
+    }
+    
+    func hangOut() {
+        let randomInteger = Int.random(in: 1...3)
+        switch randomInteger {
+        case 1:
+            mood = "Happy"
+        case 2:
+            mood = "Sad"
+        case 3:
+            mood = "Frustrated"
+        default:
+            mood = "happy"
+        }
+    }
+    
+    func feed() {
+        if health < 5 {
+            health += 1
+            
+        } else if health < 10 {
+            health = 0
+        }
+        
+        if health == 0 {
+            
+        }
+            
+        
     }
 }
