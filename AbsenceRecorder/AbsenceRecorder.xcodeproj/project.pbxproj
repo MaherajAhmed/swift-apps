@@ -18,6 +18,7 @@
 		DF82E4EA23E36E08003F6680 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4E923E36E08003F6680 /* Student.swift */; };
 		DF82E4EC23E36EA0003F6680 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4EB23E36EA0003F6680 /* Division.swift */; };
 		DF82E4EE23E36FAE003F6680 /* DivisionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4ED23E36FAE003F6680 /* DivisionFactory.swift */; };
+		DFDABBC823E8BF8F001A02D7 /* DivisionAbsenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDABBC723E8BF8F001A02D7 /* DivisionAbsenceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DF82E4E923E36E08003F6680 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DF82E4EB23E36EA0003F6680 /* Division.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Division.swift; sourceTree = "<group>"; };
 		DF82E4ED23E36FAE003F6680 /* DivisionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionFactory.swift; sourceTree = "<group>"; };
+		DFDABBC723E8BF8F001A02D7 /* DivisionAbsenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionAbsenceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				DF82E4E923E36E08003F6680 /* Student.swift */,
 				DF82E4EB23E36EA0003F6680 /* Division.swift */,
 				DF82E4ED23E36FAE003F6680 /* DivisionFactory.swift */,
+				DFDABBC723E8BF8F001A02D7 /* DivisionAbsenceViewController.swift */,
 			);
 			path = AbsenceRecorder;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				DF82E4BA23E35B3B003F6680 /* AppDelegate.swift in Sources */,
 				DF82E4EC23E36EA0003F6680 /* Division.swift in Sources */,
 				DF82E4BC23E35B3B003F6680 /* SceneDelegate.swift in Sources */,
+				DFDABBC823E8BF8F001A02D7 /* DivisionAbsenceViewController.swift in Sources */,
 				DF82E4EA23E36E08003F6680 /* Student.swift in Sources */,
 				DF82E4EE23E36FAE003F6680 /* DivisionFactory.swift in Sources */,
 			);
