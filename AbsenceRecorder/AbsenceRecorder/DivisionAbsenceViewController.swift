@@ -11,13 +11,22 @@ import UIKit
 class DivisionAbsenceViewController: UITableViewController {
     
     var division : Division?
-    var currentDate: Date = Date()
+    var absence: Absence?
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateDateDisplay()
+        
+        navigationItem.title = division?.code
+        
+        if let selectedRows = absence?.selectedRows {
+            for selectedRow in selectedRows {
+                tableView.selectRow(at: selectedRow, animated: false, scrollPosition: .none)
+            }
+        }
+        
+        
 
     }
     
@@ -32,13 +41,21 @@ class DivisionAbsenceViewController: UITableViewController {
         return cell
     }
     
-    func updateDateDisplay () {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        
-        navigationItem.title = formatter.string(from: currentDate)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedStudent = division?.studentsInDiv[indexPath.row]
+        absence?.present.append(selectedStudent!)
     }
-
     
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let selectedStudent = division?.studentsInDiv[indexPath.row]
+        absence?.present.removeAll {
+            $0.forename == selectedStudent?.forename && $0.surname == selectedStudent?.surname
+        }
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        absence?.selectedRows = tableView.indexPathsForSelectedRows
+    }
 
 }
