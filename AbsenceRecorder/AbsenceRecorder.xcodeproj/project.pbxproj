@@ -11,7 +11,7 @@
 		DF4699B923EC817D00F34625 /* Absence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4699B823EC817D00F34625 /* Absence.swift */; };
 		DF82E4BA23E35B3B003F6680 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4B923E35B3B003F6680 /* AppDelegate.swift */; };
 		DF82E4BC23E35B3B003F6680 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4BB23E35B3B003F6680 /* SceneDelegate.swift */; };
-		DF82E4BE23E35B3B003F6680 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4BD23E35B3B003F6680 /* ViewController.swift */; };
+		DF82E4BE23E35B3B003F6680 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82E4BD23E35B3B003F6680 /* HomeViewController.swift */; };
 		DF82E4C123E35B3B003F6680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF82E4BF23E35B3B003F6680 /* Main.storyboard */; };
 		DF82E4C323E35B3C003F6680 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF82E4C223E35B3C003F6680 /* Assets.xcassets */; };
 		DF82E4C623E35B3C003F6680 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF82E4C423E35B3C003F6680 /* LaunchScreen.storyboard */; };
@@ -46,7 +46,7 @@
 		DF82E4B623E35B3B003F6680 /* AbsenceRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbsenceRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF82E4B923E35B3B003F6680 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF82E4BB23E35B3B003F6680 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF82E4BD23E35B3B003F6680 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF82E4BD23E35B3B003F6680 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DF82E4C023E35B3B003F6680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF82E4C223E35B3C003F6680 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF82E4C523E35B3C003F6680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				DF82E4B923E35B3B003F6680 /* AppDelegate.swift */,
 				DF82E4BB23E35B3B003F6680 /* SceneDelegate.swift */,
-				DF82E4BD23E35B3B003F6680 /* ViewController.swift */,
+				DF82E4BD23E35B3B003F6680 /* HomeViewController.swift */,
 				DF82E4BF23E35B3B003F6680 /* Main.storyboard */,
 				DF82E4C223E35B3C003F6680 /* Assets.xcassets */,
 				DF82E4C423E35B3C003F6680 /* LaunchScreen.storyboard */,
@@ -278,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4699B923EC817D00F34625 /* Absence.swift in Sources */,
-				DF82E4BE23E35B3B003F6680 /* ViewController.swift in Sources */,
+				DF82E4BE23E35B3B003F6680 /* HomeViewController.swift in Sources */,
 				DF82E4BA23E35B3B003F6680 /* AppDelegate.swift in Sources */,
 				DF82E4EC23E36EA0003F6680 /* Division.swift in Sources */,
 				DF4699B723EC7DAD00F34625 /* StudentCell.swift in Sources */,

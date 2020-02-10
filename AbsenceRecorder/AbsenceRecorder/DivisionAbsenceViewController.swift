@@ -10,52 +10,56 @@ import UIKit
 
 class DivisionAbsenceViewController: UITableViewController {
     
-    var division : Division?
-    var absence: Absence?
+    var division: Division
+    var absence: Absence
     
-
+    init?(coder: NSCoder, division: Division, absence: Absence) {
+        self.division = division
+        self.absence = absence
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("You must create this controller with division and absence")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = division?.code
+        navigationItem.title = division.code
         
-        if let selectedRows = absence?.selectedRows {
+        if let selectedRows = absence.selectedRows {
             for selectedRow in selectedRows {
                 tableView.selectRow(at: selectedRow, animated: false, scrollPosition: .none)
             }
         }
-        
-        
-
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return division?.studentsInDiv.count ?? 0
+        return division.studentsInDiv.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Student", for: indexPath)
-        cell.textLabel?.text = division?.studentsInDiv[indexPath.row].surname
+        cell.textLabel?.text = division.studentsInDiv[indexPath.row].surname
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedStudent = division?.studentsInDiv[indexPath.row]
-        absence?.present.append(selectedStudent!)
+        let selectedStudent = division.studentsInDiv[indexPath.row]
+        absence.present.append(selectedStudent)
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        let selectedStudent = division?.studentsInDiv[indexPath.row]
-        absence?.present.removeAll {
-            $0.forename == selectedStudent?.forename && $0.surname == selectedStudent?.surname
+        let selectedStudent = division.studentsInDiv[indexPath.row]
+        absence.present.removeAll {
+            $0.forename == selectedStudent.forename && $0.surname == selectedStudent.surname
         }
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        absence?.selectedRows = tableView.indexPathsForSelectedRows
+        absence.selectedRows = tableView.indexPathsForSelectedRows
     }
-
+    
 }

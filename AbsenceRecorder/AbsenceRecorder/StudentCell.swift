@@ -14,7 +14,6 @@ class StudentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         self.accessoryType = selected ? .checkmark : .none
-        
     }
 
 }
