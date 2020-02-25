@@ -14,32 +14,36 @@ class ViewController: UIViewController {
     @IBOutlet var areaOfEnjoyment: UITextField!
     @IBOutlet var challenges: UITextField!
     @IBOutlet var waysToImprove: UITextField!
-    @IBOutlet var commentCardDisplay: UILabel!
+    @IBOutlet var generateComment: UIButton!
+    @IBOutlet var copyToClipboard: UIButton!
+    @IBOutlet var commentCardDisplay: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func generateComment(_ sender: Any) {
-        if let nameOfSubject = self.nameOfSubject.text {
-            if nameOfSubject == "" {
-            }
-        }
-        if let progress = self.progress.text {
-            if progress == "" {
-                
-            }
-        }
+    
+    func comment() -> String {
+        let nameOfSubject = self.nameOfSubject.text
+        let progress = self.progress.text
         let topic = self.areaOfEnjoyment.text
         let challenges = self.challenges.text
         let waysToImprove = self.waysToImprove.text
         
-        let data = CommentCardData(name: nameOfSubject, progress: progress, topic: topic, challenges: challenges, waysToImprove: waysToImprove)
-        
-        CommentCardFactory.generateComment(data: data)
-        
-    
+        let data = CommentCardData(name: nameOfSubject!, progress: progress!, topic: topic!, challenges: challenges!, waysToImprove: waysToImprove!)
+               
+        let generatedComment = CommentCardFactory.generateComment(data: data)
+        return generatedComment
     }
+    @IBAction func generateComment(_ sender: Any){
+        var commentDisplay = commentCardDisplay.text
+    }
+    
+    
+    @IBAction func copyToClipboard(_ sender: Any) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = commentCardDisplay.text
+    }
+    
 }
 
