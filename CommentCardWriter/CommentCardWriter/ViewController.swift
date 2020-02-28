@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet var nameOfSubject: UITextField!
     @IBOutlet var progress: UITextField!
     @IBOutlet var areaOfEnjoyment: UITextField!
@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet var generateComment: UIButton!
     @IBOutlet var copyToClipboard: UIButton!
     @IBOutlet var commentCardDisplay: UITextView!
+    @IBOutlet var subjectPicker: UIPickerView!
     
+    var pickerData = ["Maths","English","Chemistry","Biology","Physics","History"]
+                              
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,14 +38,16 @@ class ViewController: UIViewController {
         let generatedComment = CommentCardFactory.generateComment(data: data)
         return generatedComment
     }
-    @IBAction func generateComment(_ sender: Any){
-        var commentDisplay = commentCardDisplay.text
+    
+    @IBAction func generateComment(_ sender: Any) {
+        let commentCreate = comment()
+        self.commentCardDisplay.text = commentCreate
     }
     
     
     @IBAction func copyToClipboard(_ sender: Any) {
         let pasteboard = UIPasteboard.general
-        pasteboard.string = commentCardDisplay.text
+        pasteboard.string = self.commentCardDisplay.text
     }
     
 }

@@ -44,7 +44,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate Comment"/>
                                 <connections>
-                                    <action selector="generateComment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pLa-zA-7Qu"/>
+                                    <action selector="generateComment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsU-IU-rcH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of Subject e.g. Maths" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu6-oa-W5j">
@@ -53,14 +53,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqp-gZ-MZs">
-                                <rect key="frame" x="196" y="833" width="22" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="doc.on.clipboard" catalog="system"/>
-                                <connections>
-                                    <action selector="copyToClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myV-4T-qDg"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Your Generated Comment Will Appear Here Ready For Editing" translatesAutoresizingMaskIntoConstraints="NO" id="fwa-jx-WhB">
                                 <rect key="frame" x="51" y="514" width="329" height="293"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,8 +61,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqp-gZ-MZs">
+                                <rect key="frame" x="196" y="838" width="22" height="24"/>
+                                <state key="normal" image="doc.on.clipboard" catalog="system"/>
+                                <connections>
+                                    <action selector="copyToClipboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="myV-4T-qDg"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xC9-Am-BBw">
+                                <rect key="frame" x="0.0" y="108" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vqp-gZ-MZs" secondAttribute="bottom" id="DDn-gd-WZQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vqp-gZ-MZs" secondAttribute="trailing" constant="196" id="DlO-w2-pla"/>
+                            <constraint firstItem="Vqp-gZ-MZs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="196" id="rCg-zM-JPN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -81,6 +89,7 @@
                         <outlet property="generateComment" destination="KFv-8t-Nhn" id="agP-yL-8KQ"/>
                         <outlet property="nameOfSubject" destination="eu6-oa-W5j" id="Thm-fw-c1o"/>
                         <outlet property="progress" destination="Dvx-W0-ZaC" id="yDS-WD-oZS"/>
+                        <outlet property="subjectPicker" destination="xC9-Am-BBw" id="XwX-5J-vwj"/>
                         <outlet property="waysToImprove" destination="YPt-Id-0Ja" id="Jsg-9c-Kjf"/>
                     </connections>
                 </viewController>
