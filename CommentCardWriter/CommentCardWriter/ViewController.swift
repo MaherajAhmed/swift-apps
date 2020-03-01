@@ -19,7 +19,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet var commentCardDisplay: UITextView!
     @IBOutlet var subjectPicker: UIPickerView!
     
-    var pickerData = ["Maths","English","Chemistry","Biology","Physics","History"]
+    let pickerData = ["Maths","English","Chemistry","Biology","Physics","History"]
+    let numberOfComponents: Int = pickerData.count
+    
                               
     override func viewDidLoad() {
         super.viewDidLoad()
