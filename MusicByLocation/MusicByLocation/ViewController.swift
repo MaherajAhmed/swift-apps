@@ -20,7 +20,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
-        getArtists()
     }
     
     @IBAction func findMusic(_ sender: Any) {
@@ -33,7 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
                 self.musicRecommendations.text = "Could not perform lookup of location for latitude: \(firstLocation.coordinate.latitude.description)"
             } else {
                 if let firstPlacemark = placemarks?[0] {
-                    self.musicRecommendations.text = self.getArtists()
+                    self.musicRecommendations.text = self.getArtists(placemark: firstPlacemark)
                     let locationBreakdown = self.getLocationBreakdown(placemark: firstPlacemark)
                     
                 }
@@ -55,9 +54,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
             """
     }
     
-    func getArtists() -> String {
-    
-        guard let url = URL(string: "https://itunes.apple.com/search?term=Lionel%20Richie&entity=musicArtist")
+    func getArtists(placemark: CLPlacemark) -> String {
+        let placemark = placemark
+        let administrativeArea = placemark.administrativeArea
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(String(describing: administrativeArea))=administrativeArea")
             else {
                 print("Invalid URL.")
                 return "Invalid URL. Wasn't able to search ITunes"
