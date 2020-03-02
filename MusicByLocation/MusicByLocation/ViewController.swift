@@ -57,7 +57,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
     func getArtists(placemark: CLPlacemark) -> String {
         let placemark = placemark
         let administrativeArea = placemark.administrativeArea
-        guard let url = URL(string: "https://itunes.apple.com/search?term=\(String(describing: administrativeArea))=administrativeArea")
+        guard let url = URL(string: "https://itunes.apple.com/search?term=\(String(describing: administrativeArea))=artistName")
             else {
                 print("Invalid URL.")
                 return "Invalid URL. Wasn't able to search ITunes"
