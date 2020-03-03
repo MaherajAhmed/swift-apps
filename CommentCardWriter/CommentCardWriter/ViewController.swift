@@ -44,6 +44,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var commentCardDisplay: UITextView!
     @IBOutlet var subjectPicker: UIPickerView!
     @IBOutlet var progressPicker: UIPickerView!
+    @IBOutlet var characterCount: UILabel!
     
                               
     override func viewDidLoad() {
@@ -53,6 +54,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         subjectPicker.dataSource = self
         progressPicker.delegate = self
         progressPicker.dataSource = self
+        let commentCount = comment().count
+        characterCount.text = String(commentCount)
     }
     
     func comment() -> String {
@@ -72,6 +75,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func generateComment(_ sender: Any) {
         let commentCreate = comment()
+        var allComments: [String] = []
+        allComments.append(commentCreate)
+        print(allComments)
         self.commentCardDisplay.text = commentCreate
     }
     

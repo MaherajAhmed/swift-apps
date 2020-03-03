@@ -64,6 +64,13 @@
                                 <rect key="frame" x="0.0" y="140" width="414" height="76"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLg-t7-SiZ">
+                                <rect key="frame" x="20" y="839" width="51" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -76,6 +83,7 @@
                     <connections>
                         <outlet property="areaOfEnjoyment" destination="hC4-C0-1TA" id="rLU-zG-Opm"/>
                         <outlet property="challenges" destination="OsI-N0-RG2" id="gPq-hd-Sdr"/>
+                        <outlet property="characterCount" destination="DLg-t7-SiZ" id="AfB-tt-Rc9"/>
                         <outlet property="commentCardDisplay" destination="fwa-jx-WhB" id="aIM-qX-lAr"/>
                         <outlet property="copyToClipboard" destination="Vqp-gZ-MZs" id="uIC-ot-vXV"/>
                         <outlet property="generateComment" destination="KFv-8t-Nhn" id="agP-yL-8KQ"/>
