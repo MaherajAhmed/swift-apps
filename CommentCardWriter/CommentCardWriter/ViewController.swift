@@ -8,7 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    let data = ["English", "Chemistry", "Biology", "Physics", "History"]
+    
+    let progressChoices = ["GREAT progress", "good progress", "little progress"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == subjectPicker {
+            return data.count
+        } else {
+            return progressChoices.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == subjectPicker {
+            return data[row]
+        } else {
+            return progressChoices[row]
+        }
+    }
+    
     @IBOutlet var nameOfSubject: UITextField!
     @IBOutlet var progress: UITextField!
     @IBOutlet var areaOfEnjoyment: UITextField!
@@ -18,24 +43,28 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet var copyToClipboard: UIButton!
     @IBOutlet var commentCardDisplay: UITextView!
     @IBOutlet var subjectPicker: UIPickerView!
-    
-    let pickerData = ["Maths","English","Chemistry","Biology","Physics","History"]
-    let numberOfComponents: Int = pickerData.count
+    @IBOutlet var progressPicker: UIPickerView!
     
                               
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        subjectPicker.delegate = self
+        subjectPicker.dataSource = self
+        progressPicker.delegate = self
+        progressPicker.dataSource = self
     }
     
     func comment() -> String {
-        let nameOfSubject = self.nameOfSubject.text
-        let progress = self.progress.text
+        let selectedSubject = subjectPicker.selectedRow(inComponent: 0)
+        let nameOfSubject = data[selectedSubject]
+        let selectedProgress = progressPicker.selectedRow(inComponent: 0)
+        let progress = progressChoices[selectedProgress]
         let topic = self.areaOfEnjoyment.text
         let challenges = self.challenges.text
         let waysToImprove = self.waysToImprove.text
         
-        let data = CommentCardData(name: nameOfSubject!, progress: progress!, topic: topic!, challenges: challenges!, waysToImprove: waysToImprove!)
+        let data = CommentCardData(name: nameOfSubject, progress: progress, topic: topic!, challenges: challenges!, waysToImprove: waysToImprove!)
                
         let generatedComment = CommentCardFactory.generateComment(data: data)
         return generatedComment
