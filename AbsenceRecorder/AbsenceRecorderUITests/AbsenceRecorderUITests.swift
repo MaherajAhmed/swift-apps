@@ -23,10 +23,25 @@ class AbsenceRecorderUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+        func testWhenRecordinAnAbsenceStudentsRemainSelected() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+            
+            let tablesQuery = app.tables
+            tablesQuery.staticTexts["vBY-1"].tap()
+            tablesQuery.staticTexts["Surname1"].tap()
+            tablesQuery.staticTexts["Surname2"].tap()
+            tablesQuery.staticTexts["Surname3"].tap()
+            tablesQuery.staticTexts["Surname4"].tap()
+            app.navigationBars["vBY-1"].buttons["March 9, 2020"].tap()
+            
+            let divisionCell = tablesQuery.cells.element(boundBy: 0)
+            let divisionCellNoAbsence = tablesQuery.cells.element(boundBy: 1)
+            XCTAssertEqual(divisionCell.isSelected, true)
+            XCTAssertEqual(divisionCellNoAbsence.isSelected, false)
+
+                                
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.

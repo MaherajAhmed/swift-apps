@@ -56,7 +56,7 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let allPresent = UIContextualAction(style: .normal, title: "All Present") { action, view, completionHandler in
-            var division = self.divisions[indexPath.row]
+            let division = self.divisions[indexPath.row]
             let absence = Absence(date: self.currentDate, present: division.studentsInDiv)
             division.absences.append(absence)
             tableView.reloadData()
@@ -71,7 +71,7 @@ class HomeViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let cleared = UIContextualAction(style: .normal, title: "Clear All") { action, view, completionHandler in
-            var division = self.divisions[indexPath.row]
+            let division = self.divisions[indexPath.row]
             division.absences.removeAll(keepingCapacity: true)
             tableView.reloadData()
             completionHandler(true)
@@ -97,6 +97,61 @@ class HomeViewController: UITableViewController {
         navigationItem.title = formatter.string(from: currentDate)
     }
     
+    func convertDivisionsToJson() -> String? {
+        let encoder = JSONEncoder()
+        guard let encoded = try? encoder.encode(divisions) else {
+            print ("Unable to encode divisions into JSON")
+            return nil
+        }
+        
+        guard let json = String(data: encoded, encoding:  .utf8) else {
+            print("Unable to tur encoded divisions into a string")
+            return nil
+        }
+        
+        return json
+    }
+    
+    func convertJsonToDivisions(json: Data) -> [Division]? {
+        let decoder = JSONDecoder()
+        
+        guard let decoded = try? decoder.decode([Division].self, from: json) else {
+            return nil
+        }
+        
+        return decoded
+        
+    }
+    
+    func saveDataToFile() {
+        guard let divisionJson = convertDivisionsToJson() else {
+            return
+        }
+        
+        let filePath = UserDocumentManager.getDocumentsDirectory().appendingPathComponent("divisions.txt")
+        
+        do {
+            try divisionJson.write(to: filePath, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            print ("Unable to save by writing to a file")
+        }
+        
+    }
+    
+    func loadDataFromFile() {
+        
+         let filePath = UserDocumentManager.getDocumentsDirectory().appendingPathComponent("divisions.txt")
+        
+        do {
+            let json = try Data(contentsOf: filePath)
+            divisions = convertJsonToDivisions(json: json) ?? []
+        } catch {
+            print ("Failed to read from file")
+            loadDummyData()
+        }
+        
+        
+    }
     func loadDummyData() {
         divisions.append(DivisionFactory.createDivision(code: "vBY-1", of: 8))
         divisions.append(DivisionFactory.createDivision(code: "HCV-2", of: 9))
