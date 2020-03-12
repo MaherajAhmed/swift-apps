@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate {
     
     let data = ["English", "Chemistry", "Biology", "Physics", "History"]
     
-    let progressChoices = ["GREAT progress", "good progress", "little progress"]
+    let progressChoices = ["a lot of progress", "good progress", "little progress"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -46,7 +46,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var progressPicker: UIPickerView!
     @IBOutlet var characterCount: UILabel!
     
-                              
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -54,8 +54,29 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         subjectPicker.dataSource = self
         progressPicker.delegate = self
         progressPicker.dataSource = self
-        let commentCount = comment().count
-        characterCount.text = String(commentCount)
+        commentCardDisplay.delegate = self
+        let count = 400 - commentCardDisplay.text.count
+        characterCount.text = String(count)
+    }
+    
+    func checkRemainingCharacters() {
+        let allowedCharacters = 400
+        let charactersInTextView = -commentCardDisplay.text.count
+        let remainingCharacters = allowedCharacters + charactersInTextView
+        if remainingCharacters <= allowedCharacters {
+            characterCount.textColor = UIColor.black
+        }
+        if remainingCharacters <= 50 {
+            characterCount.textColor = UIColor.orange
+        }
+        if remainingCharacters <= 20 {
+            characterCount.textColor = UIColor.red
+        }
+        characterCount.text = String(remainingCharacters)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        checkRemainingCharacters()
     }
     
     func comment() -> String {
@@ -75,16 +96,31 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func generateComment(_ sender: Any) {
         let commentCreate = comment()
-        var allComments: [String] = []
-        allComments.append(commentCreate)
-        print(allComments)
         self.commentCardDisplay.text = commentCreate
+        characterCount.text = String(400-commentCardDisplay.text.count)
     }
     
     
     @IBAction func copyToClipboard(_ sender: Any) {
-        let pasteboard = UIPasteboard.general
-        pasteboard.string = self.commentCardDisplay.text
+        let allowedCharacters = 400
+        let charactersInTextView = -commentCardDisplay.text.count
+        let remainingCharacters = allowedCharacters + charactersInTextView
+        
+        if remainingCharacters < 0 {
+            let alert = UIAlertController(title: "Too Many Characters in Comment", message: "Message Not Copied", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Copy Anyway", style: .default, handler: nil))
+            self.present(alert, animated: true, completion : nil)
+        } else {
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = self.commentCardDisplay.text
+            let alert = UIAlertController(title: "Comment Has Been Copied", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion : nil)
+        }
+        var allComments: [String] = []
+        allComments.append(self.commentCardDisplay.text)
+
     }
     
 }
