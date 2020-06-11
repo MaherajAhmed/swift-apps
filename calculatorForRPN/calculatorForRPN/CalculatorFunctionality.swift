@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class CalculatorFunctionality: NSObject {
+class CalculatorFunctionality {
     
     var stack:[Int] = []
     
@@ -41,22 +41,13 @@ class CalculatorFunctionality: NSObject {
             if stack.count >= 2 {
                 return self.stack.removeFirst() - self.stack.removeLast()
             }
-        
+        case "+/-":
+            if self.stack.last != 0 {
+                return self.stack.removeLast() * (-1)
+            }
         default: break
         }
         return 0
-    }
-    
-    func switchOperator(operater: String) -> String {
-        switch operater {
-        case "+":
-            let operater = "-"
-        case "-":
-            let operater = "+"
-        default:
-            return operater
-        }
-        return operater
     }
 
 }

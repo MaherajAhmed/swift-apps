@@ -31,7 +31,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="additionOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q06-fl-I2K"/>
+                                    <action selector="changeOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5I6-Of-ymG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljV-9O-hdu">
@@ -43,7 +43,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="subtractionOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1i-6S-kiz"/>
+                                    <action selector="changeOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uad-ds-043"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s71-y1-JUh">
@@ -55,7 +55,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="×"/>
                                 <connections>
-                                    <action selector="multiplicationOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKa-05-DJ4"/>
+                                    <action selector="changeOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Elp-WV-bAd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsr-3Y-OHp">
@@ -64,7 +64,7 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="÷"/>
                                 <connections>
-                                    <action selector="divideOperator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEC-Rg-bJc"/>
+                                    <action selector="changeOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcI-bb-dnK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPK-wT-ugX">

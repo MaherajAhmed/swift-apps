@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var calcDisplay: UILabel!
+    var operater:String = ""
     var sumOfNumbers:[Int] = []
     var answer:Int = 0
     var userTyped = false
@@ -46,22 +47,8 @@ class ViewController: UIViewController {
         self.calcDisplay.text = String(answer)
     }
     
-    @IBAction func changeOperation() {
-
-    }
-    
-    @IBAction func divideOperator(_ sender: UIButton) {
-        let operater = sender.currentTitle!
-        basicStepsOfProgram(operater: operater)
-    }
-    
-    @IBAction func additionOperator(_ sender: UIButton) {
-        let operater = sender.currentTitle!
-        basicStepsOfProgram(operater: operater)
-    }
-    
-    @IBAction func subtractionOperator(_ sender: UIButton) {
-        let operater = sender.currentTitle!
+    @IBAction func changeOperation(_ sender: UIButton) {
+        operater = sender.currentTitle!
         basicStepsOfProgram(operater: operater)
     }
     
@@ -70,14 +57,7 @@ class ViewController: UIViewController {
         self.calcFunc.stack.removeAll()
         userTyped = false
     }
-    
-    @IBAction func multiplicationOperator(_ sender: UIButton) {
-        let operater = sender.currentTitle!
-        basicStepsOfProgram(operater: operater)
-    }
-    
-    
-    
+        
     @IBAction func digitPressed(_ sender: UIButton) {
         
         let digit = sender.currentTitle!
@@ -88,14 +68,12 @@ class ViewController: UIViewController {
             calcDisplay.text = digit
             userTyped = true
         }
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.calcFunc = CalculatorFunctionality()
-        
     }
-
+    
 }
 
