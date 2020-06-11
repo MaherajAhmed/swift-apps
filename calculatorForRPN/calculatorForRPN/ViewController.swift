@@ -11,11 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var calcDisplay: UILabel!
+    
     var operater:String = ""
     var sumOfNumbers:[Int] = []
     var answer:Int = 0
     var userTyped = false
     var calcFunc = CalculatorFunctionality()
+    
     var calcDisplayValue: Int {
         
         get{
@@ -25,17 +27,6 @@ class ViewController: UIViewController {
             calcDisplay.text = "\(newValue)"
             
         }
-    }
-    
-    func basicStepsOfProgram(operater: String) {
-        if userTyped{
-            
-            enterPressed()
-        }
-        answer = (self.calcFunc.operate(operater: operater))
-        sumOfNumbers.append(answer)
-        enterPressed()
-        print(answer)
     }
     
     @IBAction func enterPressed() {
@@ -49,7 +40,14 @@ class ViewController: UIViewController {
     
     @IBAction func changeOperation(_ sender: UIButton) {
         operater = sender.currentTitle!
-        basicStepsOfProgram(operater: operater)
+        if userTyped {
+            
+            enterPressed()
+        }
+        answer = (self.calcFunc.operate(operater: operater))
+        sumOfNumbers.append(answer)
+        enterPressed()
+        print(answer)
     }
     
     @IBAction func clearButton(_ sender: UIButton) {
